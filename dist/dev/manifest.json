@@ -1,0 +1,7 @@
+{
+    "prefix": "unicorn-greetings:",
+    "js": [
+      "https://localhost:4000/main.bundle.js"
+    ],
+    "css": []
+ }

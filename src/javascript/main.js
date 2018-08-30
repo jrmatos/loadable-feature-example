@@ -1,24 +1,28 @@
-alert("The scripts from the privileged unicorn app have been loaded!");
+alert("The scripts from the unicorn-greetings loadable feature have been loaded!");
 
-function UnicornMainService() {
-    this.serviceName = 'UnicornMainService';
+function MainService() {
+    this.serviceName = 'unicorn-greetings:MainService';
 }
 
-UnicornMainService.prototype = {
-    implements: ['reinit', 'unload'],
+MainService.prototype = {
+    implements: ['start', 'ready', 'stop'],
 
     register: function () {
         SYMPHONY.services.make(this.serviceName, this, this.implements, true, true);
     },
 
-    reinit: function () {
-        alert('reinit!');
+    start: function () {
+        alert('start!');
     },
 
-    unload: function () {
-        alert('unload!');
+    ready: function () {
+        alert('ready!');
+    },
+
+    stop: function () {
+        alert('stop!');
     }
 }
 
-var unicornMainService = new UnicornMainService();
-unicornMainService.register();
+var mainService = new MainService();
+mainService.register();

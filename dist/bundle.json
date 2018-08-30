@@ -1,17 +1,13 @@
 {
-    "applications": [
-      {
-        "type": "privileged",
-        "id": "unicorn-app",
-        "name": "Unicorn App",
-        "blurb": "Yaaaay!",
-        "publisher": "Unicorn Lab",
-        "icon": "https://image.flaticon.com/icons/png/128/76/76592.png",
-        "service": "UnicornMainService",
-        "javascript": [
-          "https://localhost:4000/main.bundle.js"
-        ],
-        "css": []
-      }
-    ]
-  }
+  "features": [
+    {
+      "type": "feature",
+      "id": "unicorn-greetings",
+      "name": "Unicorn Greetings",
+      "blurb": "Yaay!",
+      "publisher": "Unicorn Lab",
+      "icon": "https://image.flaticon.com/icons/png/128/76/76592.png",
+      "manifestUrl": "https://localhost:4000/dev/manifest.json"
+    }
+  ]
+}

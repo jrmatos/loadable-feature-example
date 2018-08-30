@@ -2,14 +2,13 @@ var path = require("path");
 
 module.exports = {
     entry: {
-        main: path.resolve(__dirname, "./src/javascript/main.js"),
+        main: path.resolve(__dirname, "./src/javascript/main.js")
     },
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "[name].bundle.js"
     },
-    plugins: [
-    ],
+    plugins: [],
     devServer: {
         contentBase: path.resolve(__dirname, 'dist'),
         port: 4000,
